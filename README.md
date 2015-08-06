@@ -7,7 +7,7 @@
   * SEU: German for software development environment (Software Entwicklungs-Umgebung)
   * as Code: to be able to configure, build and program the SEU as source code
   
-The SEU-as-Code website is published under the following URL https://seu-as-code.github.io/
+The SEU-as-Code website is published under the following URL: https://seu-as-code.github.io/.
 
 ## Maintainer
 
