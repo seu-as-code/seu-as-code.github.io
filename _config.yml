@@ -1,11 +1,11 @@
 # Site settings
-title: SEU-as-code Lightweight Developer Provisioning
+title: SEU-as-code - Lightweight Developer Provisioning
 email: seu-as-code@qaware.de
 description: > # this means to ignore newlines until "baseurl:"
   SEU-as-code is a lightweight developer provisioning framework based on
   the Gradle build tool. Describe your software development environment
   with the required software packages and tasks as a Gradle build file.
-  Version control everything, keep your environment up to date across
+  Version control everything and keep your environment up to date across
   the whole team.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://seu-as-code.github.io" # the base hostname & protocol for your site
