@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
       fast-stemmer (~> 1.0)
@@ -13,8 +13,9 @@ GEM
     colorator (0.1)
     execjs (2.5.2)
     fast-stemmer (1.0.2)
+    ffi (1.9.10)
     ffi (1.9.10-x64-mingw32)
-    hitimes (1.2.2)
+    hitimes (1.2.3)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -59,13 +60,14 @@ GEM
     rouge (1.9.1)
     safe_yaml (1.0.4)
     sass (3.4.16)
-    timers (4.0.1)
+    timers (4.0.4)
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
     yajl-ruby (1.2.1)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
