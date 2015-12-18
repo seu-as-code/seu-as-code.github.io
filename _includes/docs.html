@@ -4,22 +4,73 @@
             <div class="docs-inner">
             <h2 class="title text-center">Get Started</h2>
             <div class="block">
-                <h3 class="sub-title text-center">HTML</h3>
-                <p><a href="http://prismjs.com/" target="_blank">PrismJS</a> is used as the syntax highlighter here.</p>
-                <p>Below are the details of the custom PrismJS build used in this template. You can <a href="http://prismjs.com/download.html" target="_blank">build your own version</a> via their website should you need to.</p>
-                <ul class="list-unstyled">
-                    <li><strong>Compression level:</strong> Minified</li>
-                    <li><strong>Theme:</strong> Okaidia</li>
-                    <li><strong>Languages:</strong> Markup, CSS, C-like, JavaScript, PHP and Python</li>
-                </ul>
+                <p>
+                  So you have decided to build your next development environment using SEU-as-code. Follow these five
+                  basic steps to get started.
+                </p>
+                <ol style="padding-left: 20px; line-height: 2.0;">
+                    <li>
+                      <strong>Download</strong> the latest SEU-as-code archetype distribution from
+                      either <a href="https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion">Bintray</a>
+                      or <a href="https://github.com/seu-as-code/seu-as-code.archetype/releases">GitHub</a>.
+                    </li>
+                    <li>
+                      <strong>Extract</strong> the archive to a VHD or sparse image disk.
+                    </li>
+                    <li>
+                      <strong>Customize</strong> the build.gradle file and adjust the ext{} configuration
+                      section with your SEU name and root directory path. Also adjust the home and software
+                      dependencies you require. For a complete list of packages have a look at the
+                      <a href="https://github.com/seu-as-code/seu-as-code.packages">available packages</a>.
+                    </li>
+                    <li>
+                      <strong>Version control</strong> the SEU-as-code files in your Git or SVN repository.
+                    </li>
+                    <li>
+                      <strong>Bootstrap</strong> your SEU image by calling <i>`gradlew bootstrapSeu`</i> in a console window.
+                    </li>
+                </ol>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre><code class="language-markup">
-    &ltp class="my-style"&gt
-      Hello World!
-    &lt/p&gt
+                    <pre><code class="language-groovy">
+plugins {
+    id 'de.qaware.seu.as.code.base' version '2.1.0'
+}
+
+ext {
+    seuRoot = 'Q:'
+    seuName = 'SEU-as-code Quickstart'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'https://dl.bintray.com/seu-as-code/maven'
+	}
+}
+
+dependencies {
+    seuac 'org.codehaus.groovy.modules.scriptom:scriptom:1.6.0'
+    seuac 'com.h2database:h2:1.4.188'
+
+    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
+}
+
+seuAsCode {
+    seuHome = seuRoot
+    projectName = seuName
+}
+
+
                      </code></pre>
                 </div><!--//code-block-->
+            </div><!--//block-->
+
+            <div class="block">
+                <h3 class="sub-title text-center">15 Minutes Showcase</h3>
+                <p>This video showcases how to create a fully fledged development environment in under 15 minutes.</p>
+
             </div><!--//block-->
 
             <div class="block">
