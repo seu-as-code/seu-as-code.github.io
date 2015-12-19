@@ -18,13 +18,13 @@
                       <strong>Extract</strong> the archive to a VHD or sparse image disk.
                     </li>
                     <li>
-                      <strong>Customize</strong> the build.gradle file and adjust the ext{} configuration
+                      <strong>Customize</strong> the build.gradle file and adjust the seuAsCode{} configuration
                       section with your SEU name and root directory path. Also adjust the home and software
                       dependencies you require. For a complete list of packages have a look at the
                       <a href="https://github.com/seu-as-code/seu-as-code.packages">available packages</a>.
                     </li>
                     <li>
-                      <strong>Version control</strong> the SEU-as-code files in your Git or SVN repository.
+                      <strong>Version control</strong> the SEU-as-code files in a Git or SVN repository.
                     </li>
                     <li>
                       <strong>Bootstrap</strong> your SEU image by calling <i>`gradlew bootstrapSeu`</i> in a console window.
@@ -32,14 +32,13 @@
                 </ol>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre><code class="language-groovy">
-plugins {
+                    <pre><code class="language-groovy">plugins {
     id 'de.qaware.seu.as.code.base' version '2.1.0'
 }
 
-ext {
-    seuRoot = 'Q:'
-    seuName = 'SEU-as-code Quickstart'
+seuAsCode {
+    seuHome = 'Q:'
+    projectName = 'SEU-as-code Quickstart'
 }
 
 repositories {
@@ -55,23 +54,21 @@ dependencies {
 
     home 'de.qaware.seu.as.code:seuac-home:2.0.0'
     software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
-}
-
-seuAsCode {
-    seuHome = seuRoot
-    projectName = seuName
-}
-
-
-                     </code></pre>
+}                     </code></pre>
                 </div><!--//code-block-->
             </div><!--//block-->
 
+            <!--//
             <div class="block">
                 <h3 class="sub-title text-center">15 Minutes Showcase</h3>
                 <p>This video showcases how to create a fully fledged development environment in under 15 minutes.</p>
-
-            </div><!--//block-->
+                <div class="code-block">
+                  <video width="320" height="240" controls>
+                    <source src="{{ site.baseurl }}public/video/seu-as-code.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                </div>
+            </div>-->
 
             <div class="block">
                 <h3 class="sub-title text-center">Full Documentation</h3>
