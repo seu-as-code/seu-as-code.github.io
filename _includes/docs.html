@@ -27,7 +27,7 @@
                       <strong>Version control</strong> the SEU-as-code files in a Git or SVN repository.
                     </li>
                     <li>
-                      <strong>Bootstrap</strong> your SEU image by calling <i>`gradlew bootstrapSeu`</i> in a console window.
+                      <strong>Bootstrap</strong> the SEU image by calling <i>`gradlew bootstrapSeu`</i> in a console window.
                     </li>
                 </ol>
                 <div class="code-block">
@@ -42,7 +42,6 @@ seuAsCode {
 }
 
 repositories {
-	mavenCentral()
 	maven {
 		url 'https://dl.bintray.com/seu-as-code/maven'
 	}
@@ -72,10 +71,13 @@ dependencies {
 
             <div class="block">
                 <h3 class="sub-title text-center">Full Documentation</h3>
-                <p>The complete documentation of all plugins, packages, features and usage scenarios (including FAQ etc) can be found on GitHub.</p>
+                <p>
+                  The complete documentation of all plugins, packages, features and usage scenarios (including FAQ etc) can be found on GitHub.
+                  Also there is a dedicated SEU-as-code online documentation repository.
+                </p>
                 </br>
                 <p class="text-center">
-                    <a class="btn btn-cta-primary" href="https://github.com/seu-as-code/seu-as-code.archetype" target="_blank">More on GitHub</a>
+                    <a class="btn btn-cta-primary" href="https://seu-as-code.github.io/seu-as-code.documentation/" target="_blank">More on GitHub</a>
                 </p>
             </div><!--//block-->
 
