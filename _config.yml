@@ -1,5 +1,5 @@
 # Site settings
-title: SEU-as-code - Lightweight Developer Provisioning
+title: SEU-as-code - Lightweight Developer Provisioning with Gradle
 email: seu-as-code@qaware.de
 description: > # this means to ignore newlines until "baseurl:"
   SEU-as-code is a lightweight developer provisioning framework based on
